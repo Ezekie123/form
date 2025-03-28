@@ -8,13 +8,14 @@
         /* Inline CSS style */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #fff;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh; /* Make sure the body takes at least 100vh */
+            color: #000;
         }
 
         .form-container {
@@ -24,32 +25,31 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             width: 80%;
             max-width: 600px;
-        }
-
-        .form-container img {
-            display: block;
-            margin: 0 auto 30px;
-            width: 200px;
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: column; /* Ensure the form aligns vertically */
         }
 
         h2 {
             text-align: center;
             margin-bottom: 30px;
             font-size: 24px;
-            color: #333;
+            color: #000;
         }
 
         input, select, textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
-            border: 1px solid #ccc;
+            border: 1px solid #000; /* Set border to black */
             border-radius: 5px;
             font-size: 16px;
+            background-color: #fff;
+            color: #000;
         }
 
         input[type="submit"] {
-            background-color: #4CAF50;
+            background-color: #000;
             color: white;
             cursor: pointer;
             font-size: 18px;
@@ -57,7 +57,7 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #000; /* Set hover effect to black */
         }
 
         .input-container {
@@ -66,16 +66,18 @@
 
         label {
             font-weight: bold;
-            color: #333;
+            color: #000;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
 
     <div class="form-container">
-        <!-- Your logo here -->
-        <img src="https://www.shutterstock.com/image-vector/nike-logo-vector-illustration-eps-260nw-2414080435.jpg" alt="Logo">
-
         <h2>Job Details Form</h2>
 
         <!-- Form action now uses Formspree URL -->
@@ -126,6 +128,11 @@
         </form>
 
         <h4>Once you submit this form, you will be redirected to this page, and a representative will follow up with you shortly.</h4>
+
+        <!-- Logo placed after the button -->
+        <div class="logo-container">
+            <img src="https://www.shutterstock.com/image-vector/nike-logo-vector-illustration-eps-260nw-2414080435.jpg" alt="Logo" width="200">
+        </div>
     </div>
 
 </body>
